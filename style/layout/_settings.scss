@@ -1,0 +1,76 @@
+// ************* fonts ************************************
+@font-face {
+    font-family: titre1;
+    src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: paragraph1;
+    src: url(../../fonts/Merriweather-Light.ttf);
+}
+
+$font_p: 'paragraph1',
+sans-serif;
+$font_t: 'titre1',
+serif;
+// ************** colors ******************************************
+$black1: rgb(17, 17, 17);
+$white1: rgb(243, 243, 243);
+$grey1: rgb(209, 209, 209);
+$grey2: rgb(233, 233, 233);
+$grey3: rgb(105, 105, 105);
+// ************** init ******************************************
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(../../images/bg.jpg) fixed center/cover;
+    text-align: center;
+}
+
+p,
+span {
+    font-family: $font_p;
+}
+
+a {
+    display: inline-block;
+}
+
+a,
+a:visited {
+    color: $black1;
+    text-decoration: none;
+}
+
+@mixin titles {
+    font-family: $font_t;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3,
+label,
+li,
+.titre {
+    @include titles();
+}
+
+.button {
+    padding: 5px 15px;
+    border: solid 2px $black1;
+    @include titles()
+}
+
+li {
+    list-style: none;
+}

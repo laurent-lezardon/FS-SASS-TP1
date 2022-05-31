@@ -1,0 +1,148 @@
+@import url(./layout/_nav.scss);
+@font-face {
+  font-family: titre1;
+  src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+  font-family: paragraph1;
+  src: url(../../fonts/Merriweather-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(../../images/bg.jpg) fixed center/cover;
+  text-align: center;
+}
+
+p,
+span {
+  font-family: "paragraph1", sans-serif;
+}
+
+a {
+  display: inline-block;
+}
+
+a,
+a:visited {
+  color: #111111;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+label,
+li,
+.titre {
+  font-family: "titre1", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.button {
+  padding: 5px 15px;
+  border: solid 2px #111111;
+  font-family: "titre1", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+  color: #f3f3f3;
+}
+
+.blockcenter {
+  max-height: 80%;
+  max-width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.blockcenter p {
+  font-style: italic;
+  margin: 35px 0;
+}
+
+.blockcenter a {
+  color: #f3f3f3;
+  font-size: 0.6rem;
+  border: solid 1px #f3f3f3;
+  padding: 8px 12px;
+  border-radius: 100%;
+}
+
+h1 {
+  font-weight: 900;
+  color: #f3f3f3;
+}
+
+header p {
+  color: #f3f3f3;
+  font-size: 0.7rem;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  background-color: rgba(128, 128, 128, 0.575);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul.onglet li {
+  font-size: 0.4rem;
+  padding: 15px 10px;
+  letter-spacing: normal;
+}
+
+nav ul.socialnetworks {
+  padding: 0 5px;
+}
+
+nav ul.socialnetworks li {
+  font-size: 0.6rem;
+  padding: 0 10px;
+}
+/*# sourceMappingURL=style.css.map */
