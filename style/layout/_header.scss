@@ -5,6 +5,13 @@
                 align-content: center;
                 position: relative;
                 color: $white1;
+                opacity: 0;
+                animation: opening 1.5s forwards;
+                @keyframes opening {
+                    to {
+                        opacity: 1;
+                    }
+                }
             }
             
             .blockcenter {
@@ -14,9 +21,10 @@
                 margin: auto;
                 p {
                     font-style: italic;
-                    margin: 35px 0;
+                    margin: 35px auto;
                 }
-                a {
+                a,
+                a:visited {
                     color: $white1;
                     font-size: 0.6rem;
                     border: solid 1px $white1;
@@ -26,7 +34,6 @@
             }
             
             h1 {
-                font-weight: 900;
                 color: $white1;
             }
             
@@ -41,7 +48,6 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 70%;
                 background-color: rgba(128, 128, 128, 0.575);
                 ul {
                     display: flex;
@@ -51,6 +57,10 @@
                         font-size: 0.4rem;
                         padding: 15px 10px;
                         letter-spacing: normal;
+                        &:first-child {
+                            color: $grey3;
+                            background-color: $white1;
+                        }
                     }
                 }
                 ul.socialnetworks {

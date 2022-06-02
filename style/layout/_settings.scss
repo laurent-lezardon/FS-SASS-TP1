@@ -1,7 +1,7 @@
 // ************* fonts ************************************
 @font-face {
     font-family: titre1;
-    src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(../../fonts/Inter-ExtraBold.ttf);
 }
 
 @font-face {
@@ -9,9 +9,9 @@
     src: url(../../fonts/Merriweather-Light.ttf);
 }
 
-$font_p: 'paragraph1',
+$font_p: "paragraph1",
 sans-serif;
-$font_t: 'titre1',
+$font_t: "titre1",
 serif;
 // ************** colors ******************************************
 $black1: rgb(17, 17, 17);
@@ -33,44 +33,68 @@ html {
 body {
     background: url(../../images/bg.jpg) fixed center/cover;
     text-align: center;
-}
-
-p,
-span {
-    font-family: $font_p;
-}
-
-a {
-    display: inline-block;
-}
-
-a,
-a:visited {
-    color: $black1;
-    text-decoration: none;
-}
-
-@mixin titles {
-    font-family: $font_t;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-h1,
-h2,
-h3,
-label,
-li,
-.titre {
-    @include titles();
-}
-
-.button {
-    padding: 5px 15px;
-    border: solid 2px $black1;
-    @include titles()
-}
-
-li {
-    list-style: none;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $black1;
+        animation: openin 2.5s ease forwards;
+        @keyframes openin {
+            to {
+                opacity: 0;
+            }
+        }
+    }
+    nav,
+    section,
+    footer {
+        width: 70%;
+    }
+    section,
+    footer {
+        background-color: $white1;
+    }
+    p {
+        font-family: $font_p;
+        font-size: 0.8rem;
+    }
+    a {
+        display: inline-block;
+    }
+    a,
+    a:visited {
+        color: $black1;
+        text-decoration: none;
+    }
+    @mixin titles {
+        font-family: $font_t;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    h1,
+    h2,
+    h3,
+    label,
+    li,
+    span {
+        @include titles();
+    }
+    // ******************** boutons *********************
+    .button {
+        padding: 5px 15px;
+        border: solid 1px $black1;
+        @include titles();
+        font-size: 0.5rem;
+        transition: 0.2s;
+        &:hover {
+            border: solid 1px $grey3;
+            color: $grey3;
+        }
+    }
+    li {
+        list-style: none;
+    }
 }
